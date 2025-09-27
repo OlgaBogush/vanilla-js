@@ -93,3 +93,35 @@ body {
   cursor: not-allowed;
 }
 
+/* modal */
+.winning-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .9);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  font-size: 3rem;
+}
+.winning-message button {
+  font-size: 2rem;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  cursor: pointer;
+
+  transition: background-color .1s linear;
+}
+.winning-message button:hover {
+  background-color: lightgrey;
+}
+.winning-message.show {
+  display: flex;
+}
+
