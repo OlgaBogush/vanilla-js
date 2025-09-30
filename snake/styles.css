@@ -1,0 +1,82 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #E3F2ED;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 65vmin;
+  height: 70vmin;
+  background-color: #293447;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.game-details {
+  color: #B8C6DC;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
+.play-board {
+  display: grid;
+  grid-template: repeat(30, 1fr) /  repeat(30, 1fr);
+  width: 100%;
+  height: 100%;
+  background-color: #212837;
+}
+.play-board .food {
+  background-color: #FF003D;
+}
+.play-board .head {
+  background-color: #60CBFF;
+}
+.controls {
+  display: none;
+  justify-content: space-between;
+}
+.controls .arrow {
+  height: 50px;
+  width: calc(100% / 4);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+  border-right: 1px solid #212837;
+  cursor: pointer;
+}
+.arrow.left {
+  background-image: url("./svg/arrow-left-solid-full.svg");
+}
+.arrow.right {
+  background-image: url("./svg/arrow-right-solid-full.svg");
+}
+.arrow.up {
+  background-image: url("./svg/arrow-up-solid-full.svg");
+}
+.arrow.down {
+  background-image: url("./svg/arrow-down-solid-full.svg");
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  .game-details {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+  .controls {
+    display: flex;
+  }
+}
